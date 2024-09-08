@@ -95,12 +95,12 @@ main {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    
-    display: flex; /* Enables flexbox */
-    flex-direction: column; /* Stacks children vertically */
-    justify-content: center; /* Centers children vertically */
-    align-items: center; /* Centers children horizontally */
-    text-align: center; /* Centers text inside child elements */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 h3 {

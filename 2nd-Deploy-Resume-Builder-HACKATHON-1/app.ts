@@ -1,8 +1,6 @@
-// Grab the form and resume container
 const form = document.getElementById('resume-form') as HTMLFormElement;
 const resumeContainer = document.getElementById('resume-container') as HTMLElement;
 
-// Function to generate resume based on form data
 function generateResume(data: FormData) {
     const name = data.get('name') as string;
     const title = data.get('title') as string;
@@ -48,7 +46,6 @@ function generateResume(data: FormData) {
     `;
 }
 
-// Form submission event
 form.addEventListener('submit', (event: Event) => {
     event.preventDefault();
     const formData = new FormData(form);

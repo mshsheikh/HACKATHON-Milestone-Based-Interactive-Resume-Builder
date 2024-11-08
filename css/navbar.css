@@ -1,0 +1,171 @@
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: #000000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Keeps the left side fixed */
+    width: auto; /* Ensures the navbar-left only takes as much space as needed */
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 15px;
+}
+
+.site-info {
+    color: white;
+}
+
+.site-info h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.slogan {
+    font-size: 14px;
+    color: #cccccc;
+    margin: 5px 0 0;
+    text-align: left;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end; /* Aligns the navbar-right to the right side */
+    width: auto; /* Ensures the navbar-right takes as much space as needed */
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-btn {
+    color: #fff;
+    background-color: #1f1f1f;
+    border: 2px solid #fe5523;
+    box-shadow: 0 0 8px #fe5523; /* Initial glow */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.view-btn {
+    color: #fff;
+    background-color: #1f1f1f;
+    border: 2px solid #1bf4ff;
+    box-shadow: 0 0 8px #1bf4ff; /* Initial glow */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.create-btn:hover {
+    box-shadow: 0 0 10px #fe5523, 0 0 14px #fe5523; /* Increase glow on hover */
+}
+
+.view-btn:hover {
+    box-shadow: 0 0 10px #1bf4ff, 0 0 14px #1bf4ff; /* Increase glow on hover */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.hamburger div {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    width: auto;
+}
+
+.navbar-right ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-right li {
+    display: inline-block;
+}
+
+.navbar-right ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Keep navbar elements on a row */
+        align-items: center; /* Center align the content */
+        padding: 10px 15px;
+    }
+
+    .navbar-left {
+        flex: 1; /* Ensures the left side takes space but stays left */
+        justify-content: flex-start; /* Keeps the left items at the start */
+    }
+
+    .navbar-right {
+        display: none; /* Initially hides the right navbar */
+    }
+
+    .hamburger {
+        display: flex; /* Shows the hamburger icon */
+    }
+}
+
+/* Show the dropdown menu when hamburger is clicked */
+@media (max-width: 768px) {
+    .navbar-right.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .site-info h1 {
+        font-size: 18px;
+    }
+
+    .slogan {
+        font-size: 10px;
+    }
+
+    .nav-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
